@@ -1,0 +1,104 @@
+/* estilos da pesquisa */
+main div#janela_login {
+    width:540px;
+    height:250px;
+    padding: 20px;
+    margin:120px auto 30px;
+    border-radius: 5px;
+}
+
+
+main div#janela_login form {
+    width:470px;
+    margin:10px auto;
+    text-align: center;
+}
+
+main div#janela_login form h2  {
+    font-family: sans-serif;
+    color:#c4e1fc;
+    text-align: center;
+}
+
+main div#janela_login form p {
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 5px;
+    width:120px;
+    text-align: center;
+}
+
+main div#botao_cadastro h4 p {
+    position: absolute;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: -60px;
+    margin-left: 65px;
+    color: #ade5ff;
+    padding: 10px;
+    border-radius: 5px;
+    width: 120px;
+    text-align: center;
+}
+
+label.conta {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: -85px;
+    display: inline-block;
+    width: 90px;
+    color: rgb(240, 240, 240);
+}
+    
+main div#botao_cadastro {
+    margin-top: -10px;
+}
+
+main div#botao_cadastro a{
+    position: absolute;
+        font-family: sans-serif;
+        font-size: 15px;
+        margin-top: 20px;
+        margin-right: -90px;
+        margin-left: -100px;
+        color: #ade5ff;
+}
+
+main div#janela_login form input[type="text"] {
+    width:280px;
+    padding:10px;
+    border:1px solid #4d4c4b;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+    
+}
+
+main div#janela_login form input[type="password"] {
+    width:280px;
+    padding:10px;
+    margin-top:15px;
+    border:1px solid #4d4c4b;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+}
+
+main div#janela_login form input[type="submit"] {
+    display:block;
+    margin:auto ;
+    padding:10px 20px;
+    margin-top:15px;
+    margin-right:82px;
+    color: #FFF;
+    border:0;
+    border-radius: 5px;
+    background-color: #2070b7;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+}
+/* fim do estilo da pesquisa */
