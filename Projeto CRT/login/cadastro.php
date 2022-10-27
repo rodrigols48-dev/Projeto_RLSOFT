@@ -1,23 +1,23 @@
-<?php require_once("../../BD/conexao/conexao.php") ?>
+<?php require_once("../../BD/conexao/conexao.php"); ?>
 
 <?php
 // insercao no banco
-if (isset($_POST["usuario"])) {
+if (isset($_POST["cidade"])) {
     $nomecompleto   = $_POST["nomecompleto"];
     $usuario        = $_POST["usuario"];
     $senha          = $_POST["senha"];
     $email          = $_POST["email"];
     $cidade         = $_POST["cidade"];
-    $estado         = $_POST["estados"];
+    $estados        = $_POST["estados"];
     $telefone       = $_POST["telefone"];
 
     $inserir     = "INSERT INTO clientes ";
     $inserir    .= " (nomecompleto, usuario, senha, email, cidade, estados, telefone)";
-    $inserir    .= " VALUES ('$nomecompleto','$usuario','$senha','$email','$cidade','$estado','$telefone'";
+    $inserir    .= " VALUES ('$nomecompleto','$usuario','$senha','$email','$cidade','$estados','$telefone'";
 
-    $operacao_inserir = mysqli_query($conecta, $inserir) or die(mysqli_error());
+    $operacao_inserir = mysqli_query($conecta, $inserir);
     if (!$operacao_inserir) {
-        throw new Exception("Cadastro inválido", 1);
+        die("Falha na inserção");
     } else {
         echo ("Usuario cadastrado com sucesso!");
     }
@@ -65,7 +65,7 @@ if (!$linha_estados) {
                 <label class="conta">Senha:</label><input type="password" name="senha" placeholder="Senha" required><br>
                 <label class="conta">Email:</label><input type="email" name="email" placeholder="Email" required><br>
                 <label class="conta">Telefone:</label><input type="text" name="telefone" placeholder="Telefone" required><br>
-                <label class="conta">Cidade:</label><input type="text" name="cidade" placeholder="Cidade"><br>
+                <label class="conta">Cidade:</label><input type="text" name="cidade" placeholder="Cidade" required><br>
                 <label class="conta">Estado:</label><select name="estados">
 
                     <?php while ($linha = mysqli_fetch_assoc($linha_estados)) { ?>
@@ -74,11 +74,15 @@ if (!$linha_estados) {
                         </option>
                     <?php } ?>
                 </select><br>
+                
+                <label class="conta"><input type="radio" name="nivel1" value="admin"  >admin</label><br>
+                <label class="conta"><input type="radio" name="nivel2" value="user" >user</label>
+
                 <input type="submit" value="Cadastrar">
                 <input type="button" value="Voltar" onclick="window.location.replace('login.php')">
 
 
-
+            </form>
         </div>
     </main>
     <?php include_once("../login/rodape_login.php"); ?>

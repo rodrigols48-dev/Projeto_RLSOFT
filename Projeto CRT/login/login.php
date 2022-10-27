@@ -34,7 +34,7 @@ if (isset($_POST["usuario"])) {
     $informacao = mysqli_fetch_assoc($acesso);
 
     if (empty($informacao)) {
-        $mensagem = "ERRO: login sem sucesso!";
+        $mensagem = "ERRO: Usuário ou senha inválido!";
     } else {
         $_SESSION["user_portal"] = $informacao["clienteID"];
         header("location:../index.php");
@@ -69,25 +69,25 @@ if (isset($_POST["usuario"])) {
                 <label class="conta">Senha:</label><input type="password" name="senha" placeholder="Senha" required="required"><br>
                 <input type="submit" value="Acessar">
 
-                
-                    
-                    <div id="botao_cadastro">
-                        <h4>
-                            <p>Não possui login?<a href="cadastro.php">Cadastrar-se</a></p>
-                        </h4>
-                        
-                    </div>
-                    <?php
+
+                <div id="botao_cadastro">
+                    <h4>
+                        <p>Não possui login?<a href="cadastro.php">Cadastrar-se</a></p>
+                    </h4>
+
+                </div>
+                <?php
                 if (isset($mensagem)) {
                 ?>
                     <p><?php echo $mensagem ?>
                     <?php
                 }
-                ?>
+                    ?>
+                    <img id="R" src="../_assets/R (11).png">
             </form>
         </div>
     </main>
-    <?php include_once("../login/rodape_login.php"); ?>
+   
 </body>
 
 </html>

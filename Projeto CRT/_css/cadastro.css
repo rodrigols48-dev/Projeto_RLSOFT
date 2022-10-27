@@ -18,7 +18,7 @@ main div#janela_cadastro form {
 }
 
 main div#janela_cadastro form h2 {
-    font-family: sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;;
     color: #2070b7;
     text-align: center;
 }

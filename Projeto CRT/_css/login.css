@@ -2,7 +2,7 @@
 main div#janela_login {
     width:540px;
     height:250px;
-    padding: 20px;
+    padding: 55px;
     margin:120px auto 30px;
     border-radius: 5px;
 }
@@ -15,7 +15,7 @@ main div#janela_login form {
 }
 
 main div#janela_login form h2  {
-    font-family: sans-serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color:#c4e1fc;
     text-align: center;
 }
@@ -69,6 +69,9 @@ main div#botao_cadastro a{
 
 main div#janela_login form input[type="text"] {
     width:280px;
+    background-image: url(../_assets/icons8-usuário-16.png);
+    background-repeat: no-repeat;
+    background-position: 270px 10px;
     padding:10px;
     border:1px solid #4d4c4b;
     border-radius: 5px;
@@ -79,6 +82,9 @@ main div#janela_login form input[type="text"] {
 
 main div#janela_login form input[type="password"] {
     width:280px;
+    background-image: url(../_assets/icons8-cadeado-2-16.png);
+        background-repeat: no-repeat;
+        background-position: 270px 10px;
     padding:10px;
     margin-top:15px;
     border:1px solid #4d4c4b;
@@ -100,5 +106,13 @@ main div#janela_login form input[type="submit"] {
     outline: none;
     cursor: pointer;
     text-align: center;
+}
+
+main img#R {
+    width: 80px;
+    margin-left: 460px;
+    margin-bottom: 400px;
+    margin-top: -270px;
+    border-radius: 5px;
 }
 /* fim do estilo da pesquisa */
