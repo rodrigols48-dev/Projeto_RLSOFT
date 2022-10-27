@@ -1,13 +1,25 @@
-body { margin:0; background-color: #ffffff; }
+body { 
+    margin:0; 
+    padding: 0;
+   
+    background-color: #ffffff; 
+
+}
+
+.slider {
+    margin: 0 auto;
+    width: 800px;
+    height: 400px;
+}
 
         nav {
-            width: 620px;
+            width: 625px;
             height: 40px;
 
             padding-top: 15px;
             background-color: #2070b7;
             position: absolute;
-            margin-left: 440px;
+            margin-left: 360px;
             margin-bottom: center;
             margin-top: 4px;
         }
@@ -39,11 +51,12 @@ body { margin:0; background-color: #ffffff; }
         }
 
         header {
-    width:100%;
-    height:67px;
-    background-color:#2071b7;
-    position: fixed;
-    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);
+        position: fixed;
+        width:100%;
+        height:67px;
+        background-color:#2071b7;
+        position: fixed;
+        box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);
     
 }
 
@@ -63,17 +76,47 @@ div#header_central {
     
 }
 
+div#header_inicial {
+    position: fixed;
+    width: 800px;
+    height: 55px;
+    margin: 0 auto;
+    margin-bottom: 2px;
+
+}
+
 
 div#header_central img {
     margin-top:0px;   
 }
+
+div#header_inicial img {
+    margin-top: 0px;
+}
+
 div#header_saudacao {
+    width: 155px;
     background-image: url(../_assets/icons8-exit-16.png);
     background-repeat: no-repeat;
-    background-position: 208px 30px;
+    background-position: 113px 30px;
     position: absolute;
     top:0;
-    right:-240px;
+    right:25px;
+    padding: 15px;
+    padding-right: -30px;
+    padding-left: -20px;
+    margin-left: -0px;
+    margin-right: -545px;
+    text-align: center;
+}
+
+div#header_saudacaoinicial {
+    background-image: url(../_assets/icons8-exit-16.png);
+    background-repeat: no-repeat;
+    background-position: 207px 30px;
+    position: absolute;
+    top: 0;
+    right: 30px;
     padding: 15px;
     padding-right: -30px;
     padding-left: -20px;
@@ -83,18 +126,40 @@ div#header_saudacao {
 }
 
 div#header_saudacao h5 {
+    height: 30px;
+    width: 160px;
+    background-image: url(../_assets/icons8-usuário-16-1.png);
+    background-repeat: no-repeat;
+    background-position: -2px 0px;
     font-family: sans-serif;
     font-size: 12.5px;
     font-weight: 100;
     margin:2px 0 0 0;
     padding:auto; 
+    text-align: center;
+    inline-size: auto;
+    color: #f1f1f1;
+}
+
+div#header_saudacaoinicial h5 {
+    font-family: sans-serif;
+    font-size: 12.5px;
+    font-weight: 100;
+    margin: 2px 0 0 0;
+    padding: auto;
     text-align: right;
     color: #f1f1f1;
 }
 
 div#header_saudacao a {
-    font-family:fantasy;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     color:#ff0000;
+    padding-left: 18px;
+}
+
+div#header_saudacaoinicial a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #ff0000;
     padding-left: 18px;
 }
 
@@ -106,10 +171,12 @@ main {
 }
 
 footer {
+    position:fixed;
+    bottom: 0;
     clear: both;
     width:100%;
     height: 45px;
-    margin-top: 100px;
+    margin-top: 20px;
     margin-bottom: -30px;
     border-top:1px solid #858585;
 }
@@ -149,7 +216,7 @@ main div#pm4r img{
 
 main div.texto1 h1{
     position: absolute;
-    text-shadow: 0.1em 0.1em 0.6em rgb(230, 230, 230);
+    text-shadow: 0.1em -0em 0.6em rgb(230, 230, 230);
     top: 100px;
     left: 50px;
     font-family: apple-system,
@@ -172,7 +239,7 @@ main div.texto1 h1{
 
 main div.texto2 h3 p {
    position: absolute;
-text-shadow: 0.1em 0.1em 0.6em rgb(230, 230, 230);
+text-shadow: 0.1em 0.1em 0.3em rgb(230, 230, 230);
     text-align: center;
     font-size: 20px;
     top: 150px;
@@ -195,3 +262,4 @@ text-shadow: 0.1em 0.1em 0.6em rgb(230, 230, 230);
     letter-spacing: -0.05em;
 
 }
+
