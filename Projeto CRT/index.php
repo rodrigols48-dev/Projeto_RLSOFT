@@ -23,19 +23,23 @@ session_start();
     <?php include_once("_incluir/topo.php") ?>
     <?php include_once("_incluir/funcoes.php") ?>
     <main>
-        <div class="texto1">
-            <h1>Quem somos?</h1>
-        </div>
-        <div  class="texto2">
-            <h3>
-                <p>Somos uma empresa especializada na<br> criação e venda<br> de hardwares e softwares para
-                    deixar sua empresa,<br> loja ou serviço mais sofisticado.</p>
-            </h3>
-        </div>
-
-        <div id="pm4r">
-            <img id="pm4r" src="_assets/asset-management-jira-service-desk-1.png">
-        </div>
+        <ul class="slider">
+            <li>
+                <input type="radio" id="slide1" name="slide" checked>
+                <label for="slide1"></label>
+                <img src="_assets/R (11).png">
+            </li>
+            <li>
+                <input type="radio" id="slide2" name="slide">
+                <label for="slide2"></label>
+                <img src="_assets/2451031-gradiente-azul-fundo-grátis-vetor.jpg">
+            </li>
+            <li>
+                <input type="radio" id="slide3" name="slide">
+                <label for="slide3"></label>
+                <img src="_assets/Jira@2x.png">
+            </li>
+        </ul>
 
 
     </main>
