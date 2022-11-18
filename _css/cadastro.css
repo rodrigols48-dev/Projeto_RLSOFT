@@ -1,0 +1,304 @@
+/* estilos da pesquisa de conta */
+main div#janela_cadastro {
+    width: 600px;
+        height: 450px;
+        padding: 20px;
+        margin: 60px auto 30px;
+        border-radius: 5px;
+        padding-top: 60px;
+}
+
+main div#janela_cadastro form {
+    padding-top: auto;
+    padding-bottom:auto;
+    width: 470px;
+    margin: 10px auto;
+    margin-top: -50px;
+    text-align: center;
+}
+
+main div#janela_cadastro form h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;;
+    color: #2070b7;
+    text-align: center;
+}
+
+main div#janela_cadastro form h4 {
+    font-family: sans-serif;
+    font-size: 13px;
+    color: #161616;
+    text-align: left;
+}
+
+label.conta {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: -85px;
+    display: inline-block;
+    width: 90px;
+    color:rgb(240, 240, 240);
+}
+main div#janela_cadastro form p {
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #131313;
+    padding: 10px;
+    border-radius: 5px;
+    width: 120px;
+    text-align: center;
+}
+
+main div#botao_cadastro h4 p {
+    position: absolute;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: -60px;
+    margin-left: 65px;
+    color: #000000;
+    padding: 10px;
+    border-radius: 5px;
+    width: 120px;
+    text-align: center;
+}
+
+main div#janela_cadastro form input[type="text"] {
+    width: 280px;
+    padding: 10px;
+    margin-top: 15px;
+    border: 1px solid #4d4c4b;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+
+}
+
+main div#janela_cadastro form input[type="password"] {
+    width: 280px;
+    padding: 10px;
+    margin-top: 15px;
+    border: 1px solid #4d4c4b;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+}
+
+main div#janela_cadastro form input[type="email"] {
+    width: 280px;
+    padding: 10px;
+    margin-top: 15px;
+    border: 1px solid #4d4c4b;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+}
+
+main div#janela_cadastro form input[type="adress"] {
+    width: 280px;
+    padding: 10px;
+    margin-top: 15px;
+    border: 1px solid #4d4c4b;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+}
+
+main div#janela_cadastro form input[type="number"] {
+    width: 280px;
+    padding: 10px;
+    margin-top: 15px;
+    border: 1px solid #4d4c4b;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+}
+
+main div#janela_cadastro form select {
+    width: 300px;
+    padding: 10px;
+    margin-top: 14px;
+    border: 1px solid #4d4c4b;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: auto;
+    text-align: center;
+}
+
+main div#janela_cadastro form input[type="submit"] {
+    display: block;
+    margin: auto;
+    padding: 10px 20px;
+    margin-top: 15px;
+    margin-right: 82px;
+    color: #FFF;
+    border: 0;
+    border-radius: 5px;
+    background-color: #2070b7;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+main div#janela_cadastro form input[type="button"] {
+    display: block;
+        margin: auto;
+        padding: 10px 20px;
+        margin-top: -35.5px;
+        margin-left: 82px;
+        color: #FFF;
+        border: 0;
+        border-radius: 5px;
+        background-color: #747474;
+        outline: none;
+        cursor: pointer;
+        text-align: center;
+}
+
+
+/* fim do estilo da pesquisa */
+
+
+
+
+
+/* estilos da pesquisa de produtos */
+main div#janela_cad_prod {
+    position: relative;
+    bottom: 10px;
+    width: 600px;
+        height: 450px;
+        padding: 20px;
+        margin: 60px auto 30px;
+        border-radius: 5px;
+        padding-top: 60px;
+}
+
+main div#janela_cad_prod form {
+    position: relative;
+    bottom: 30px;
+    padding-top: auto;
+    padding-bottom:auto;
+    width: 470px;
+    margin: 10px auto;
+    margin-top: -50px;
+    text-align: center;
+}
+
+main div#janela_cad_prod form h2 {
+    position: relative;
+    top: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #2070b7;
+    text-align: center;
+}
+
+main div#janela_cad_prod form h4 {
+    font-family: sans-serif;
+    font-size: 13px;
+    color: #161616;
+    text-align: left;
+}
+
+label.produto {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: -85px;
+    display: inline-block;
+    width: 90px;
+    color:#363636;
+}
+main div#janela_cad_prod form p {
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #131313;
+    padding: 10px;
+    border-radius: 5px;
+    width: 120px;
+    text-align: center;
+}
+
+main div#janela_cad_prod h4 p {
+    position: absolute;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: -60px;
+    margin-left: 65px;
+    color: #000000;
+    padding: 10px;
+    border-radius: 5px;
+    width: 120px;
+    text-align: center;
+}
+
+main div#janela_cad_prod form input[type="text"] {
+    width: 280px;
+    padding: 10px;
+    margin-top: 15px;
+    border: 1px solid #4d4c4b;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+
+}
+
+main div#janela_cad_prod form textarea {
+    position: relative;
+    top: 5px;
+    width: 295px;
+    border-radius: 5px;
+}
+
+main div#janela_cad_prod form input[type="number"] {
+    width: 280px;
+    padding: 10px;
+    margin-top: 15px;
+    border: 1px solid #4d4c4b;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+}
+
+main div#janela_cad_prod form select {
+    width: 300px;
+    padding: 10px;
+    margin-top: 14px;
+    border: 1px solid #4d4c4b;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: auto;
+    text-align: center;
+}
+
+main div#janela_cad_prod form input[type="submit"] {
+    display: block;
+    margin: auto;
+    padding: 10px 20px;
+    margin-top: 15px;
+    margin-right: 82px;
+    color: #FFF;
+    border: 0;
+    border-radius: 5px;
+    background-color: #2070b7;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+main div#janela_cad_prod form input[type="button"] {
+    display: block;
+        margin: auto;
+        padding: 10px 20px;
+        margin-top: -35.5px;
+        margin-left: 82px;
+        color: #FFF;
+        border: 0;
+        border-radius: 5px;
+        background-color: #747474;
+        outline: none;
+        cursor: pointer;
+        text-align: center;
+}
+
+
+/* fim do estilo da pesquisa de produtos */
