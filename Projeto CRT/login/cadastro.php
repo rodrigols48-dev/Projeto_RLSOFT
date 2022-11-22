@@ -11,9 +11,9 @@ if (isset($_POST["cidade"])) {
     $estados        = $_POST["estados"];
     $telefone       = $_POST["telefone"];
 
-    $inserir     = "INSERT INTO clientes ";
+    $inserir     = "INSERT INTO 'clientes' ";
     $inserir    .= " (nomecompleto, usuario, senha, email, cidade, estados, telefone)";
-    $inserir    .= " VALUES ('$nomecompleto','$usuario','$senha','$email','$cidade','$estados','$telefone'";
+    $inserir    .= " VALUES ('$nomecompleto','$usuario','$senha','$email','$cidade','$estados','$telefone')";
 
     $operacao_inserir = mysqli_query($conecta, $inserir);
     if (!$operacao_inserir) {
@@ -44,7 +44,7 @@ if (!$linha_estados) {
     </div>
     <meta charset="UTF-8">
 
-    <title>RLSOFT-Cadastro</title>
+    <title>Cadastro Conta - RLSOFT</title>
     <link href="../_css/estilo.css" rel="stylesheet">
     <link href="../_css/cadastro.css" rel="stylesheet">
 
@@ -57,7 +57,7 @@ if (!$linha_estados) {
 
     <main>
         <div style="background-color: rgba(0, 0, 20, 0.5)" id="janela_cadastro">
-            <form action="cadastro.php" method="post">
+            <form action="login.php" method="post">
                 <h2>CADASTRO</h2>
 
                 <label class="conta">Nome Completo:</label><input type="text" name="nomecompleto" placeholder="Nome Completo" required><br>
@@ -74,9 +74,6 @@ if (!$linha_estados) {
                         </option>
                     <?php } ?>
                 </select><br>
-                
-                <label class="conta"><input type="radio" name="nivel1" value="admin"  >admin</label><br>
-                <label class="conta"><input type="radio" name="nivel2" value="user" >user</label>
 
                 <input type="submit" value="Cadastrar">
                 <input type="button" value="Voltar" onclick="window.location.replace('login.php')">
