@@ -41,10 +41,10 @@ if (!$detalhe) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RLSoft</title>
+    <title><?php echo $nomeproduto ?></title>
 
     <link href="../_css/estilo.css" rel="stylesheet">
-    <link href="_css/produto_detalhe.css" rel="stylesheet">
+    <link href="../_css/produto_detalhe.css" rel="stylesheet">
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
 
 </head>
@@ -59,16 +59,16 @@ if (!$detalhe) {
                 <li>
                     <h2><?php echo $nomeproduto ?></h2>
                 </li>
-                <li><b>Descrição: </b><?php echo $descricao ?></li>
+                <li><b>Descrição: </b><br><?php echo $descricao ?></li>
+                <br><br><br><br><br><br><br>
                 <li><b>Código de Barra: </b><?php echo $codigobarra ?></li>
                 <li><b>Tempo de Entrega: </b><?php echo $tempoentrega ?></li>
                 <li><b>Preço Revenda: </b><?php echo real_format($precorevenda) ?></li>
                 <li><b>Preço Unitário: </b><?php echo real_format($precounitario) ?></li>
                 <li><b>Estoque: </b><?php echo $estoque ?></li>
             </ul>
-
+            <input type="button" value="Voltar" onclick="window.location.replace('produtos.php')">
         </div>
-
 
 
     </main>

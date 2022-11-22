@@ -18,24 +18,31 @@ session_start();
 
 </head>
 
-<body>
+<body background="../_assets/4907157.jpg">
     <?php include_once("../_incluir/topo.php") ?>
     <?php include_once("../_incluir/funcoes.php") ?>
     <main>
- <div class="texto1">
-            <h1>Quem somos?</h1>
-        </div>
-        <div  class="texto2">
-            <h3>
-                <p>Somos uma empresa especializada na<br> criação e venda<br> de hardwares e softwares para
-                    deixar sua empresa,<br> loja ou serviço mais sofisticado.</p>
-            </h3>
-        </div>
+        <div id="sobre">
+           
+                <div class="texto1">
+                    <h2>
+                        <p></p>
+                    </h2>
 
-        <div id="pm4r">
-            <img id="pm4r" src="../_assets/asset-management-jira-service-desk-1.png">
-        </div>
+                </div>
+           
 
+            <div style="background-color: rgba(0, 0, 20, 0.5)" id="texto2">
+                <h3>
+                    <p>
+                    </p>
+                </h3>
+            </div>
+
+            <div id="pm4r">
+                <img id="pm4r" src="../_assets/asset-management-jira-service-desk-1.png">
+            </div>
+        </div>
     </main>
     <?php include_once("../_incluir/rodape.php") ?>
 </body>

@@ -11,7 +11,7 @@ if (!isset($_SESSION["user_portal"])) {
 setlocale(LC_ALL, 'pt_BR');
 
 // Consulta ao banco de dados
-$produtos = "SELECT produtoID, nomeproduto, tempoentrega, precounitario, imagempequena, imagemgrande ";
+$produtos = "SELECT produtoID, nomeproduto, tempoentrega, precounitario, imagempequena, imagemgrande, estoque ";
 $produtos .= "FROM produtos ";
 if (isset($_GET["produto"])) {
     $nome_produto = $_GET["produto"];
@@ -30,7 +30,7 @@ if (!$resultado) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre - RLSOFT</title>
+    <title>Produtos - RLSOFT</title>
 
     <link href="../_css/estilo.css" rel="stylesheet">
     <link href="../_css/produtos.css" rel="stylesheet">
@@ -38,15 +38,44 @@ if (!$resultado) {
 </head>
 
 <body>
+    <script type="text/javascript" src="../javascript/filtro.js"></script>
     <?php include_once("../_incluir/topo.php") ?>
     <?php include_once("../_incluir/funcoes.php") ?>
     <main>
         <div id="janela_pesquisa">
             <form action="produtos.php" method="get">
-                <input type="text" name="produto" placeholder="Pesquisa">
-                <input type="image" src="../_assets/botao_search.png">
+                <input type="text" name="produto" placeholder="Pesquisar produto">
+                <input type="image" src="../_assets/botao_searchazul.png">
             </form>
+            <a href="../pages/produtos.php">limpar filtro</a>
         </div>
+
+        <div id="filtro_produto">
+            <div id="borda_filtro">
+                <h1>
+                    <p>Filtro</p>
+                </h1>
+                <ul>
+                    <form action="produtos.php" id="gab">
+                        <input type="checkbox" name="categoria" value="Gabinete">Gabinete</input>
+                    </form>
+                    <form action="produtos.php" id="mon">
+                        <input type="checkbox" name="categoria" value="Monitor">Monitor</input>
+                    </form>
+                    <form action="produtos.php" id="mou">
+                        <input type="checkbox" name="categoria" value="Mouse">Mouse</input>
+                    </form>
+                    <form action="produtos.php" id="pla">
+                        <input type="checkbox" name="categoria" value="Placa mãe">Placa mãe</input>
+                    </form>
+                    <form action="produtos.php" id="ser">
+                        <input type="checkbox" name="categoria" value="Servidor">Servidor</input>
+                    </form>
+                </ul>
+            </div>
+        </div>
+
+
 
         <div id="listagem_produtos">
             <?php
@@ -62,8 +91,9 @@ if (!$resultado) {
                     <li>
                         <h3><?php echo $linha["nomeproduto"] ?></h3>
                     </li>
-                    <li>Tempo de Entrega : <?php echo $linha["tempoentrega"] ?></li>
+                    <li>Estoque : <?php echo $linha["estoque"] ?></li>
                     <li>Preço unitário : <?php echo real_format($linha["precounitario"]) ?></li>
+
                 </ul>
             <?php
             }
@@ -73,8 +103,9 @@ if (!$resultado) {
 
 
     </main>
-    <?php include_once("../_incluir/rodape.php") ?>
+
 </body>
+<?php include_once("../_incluir/rodape.php") ?>
 
 </html>
 

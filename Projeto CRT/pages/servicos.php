@@ -17,55 +17,71 @@ session_start();
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
 </head>
 
-<body background="../_assets/4907157.jpg">
+<body background="../_assets/white-abstract-wallpaper_23-2148830026.png">
     <?php include_once("../_incluir/topo.php") ?>
     <?php include_once("../_incluir/funcoes.php") ?>
     <main>
+        <div id="servicos">
+            <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+            <script type="text/javascript" src="script.js"></script>
 
-        <div class="slider">
-            <div class="slides">
-                <!--Radio buttons-->
-                <input type="radio" name="radio-btn" id="radio1">
-                <input type="radio" name="radio-btn" id="radio2">
-                <input type="radio" name="radio-btn" id="radio3">
-                <input type="radio" name="radio-btn" id="radio4">
-                <!--Fim Radio buttons-->
+            <div class="slider_servicos">
+                <div class="slides">
+                    <!--Radio buttons-->
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                    <!--Fim Radio buttons-->
 
-                <!--Slides imagens-->
-                <div class="slide first">
-                    <img src="../_assets/Jira@2x.png" alt="empreendimento 1" />
+                    <!--Slides imagens-->
+                    <div class="slide first">
+                        <img src="../pages/images/produtos_imagem/slides/Servico1.png" alt="empreendimento 1" />
+                    </div>
+                    <div class="slide">
+                        <img src="../pages/images/produtos_imagem/slides/Servico2.png" alt="empreendimento 2" />
+                    </div>
+                    <div class="slide">
+                        <img src="../pages/images/produtos_imagem/slides/Servico3.png" alt="empreendimento 3" />
+                    </div>
+                    <div class="slide">
+                        <img src="../pages/images/produtos_imagem/slides/Servico4.png" alt="empreendimento 4" />
+                    </div>
+                    <!-- Fim Slides imagens-->
+
+                    <!--Navigation Auto-->
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                    </div>
+
                 </div>
-                <div class="slide">
-                    <img src="../_assets/jira-854x760-1.png" alt="empreendimento 2" />
-                </div>
-                <div class="slide">
-                    <img src="../_assets/asset-management-atlassian-marketplace-600x320-@2x.png" alt="empreendimento 3" />
-                </div>
-                <div class="slide">
-                    <img src="../_assets/asset-management-jira-service-desk-1.png" alt="empreendimento 4" />
-                </div>
-                <!-- Fim Slides imagens-->
-                
-                <!--Navigation Auto-->
-                <div class="navigation-auto">
-                    <div class="auto-btn1"></div>
-                    <div class="auto-btn2"></div>
-                    <div class="auto-btn3"></div>
-                    <div class="auto-btn4"></div>
+
+                <div class="manual-navigation">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
                 </div>
 
             </div>
-            
-            <div class="manual-navigation">
-                <label for="radio1" class="manual-btn"></label>
-                <label for="radio2" class="manual-btn"></label>
-                <label for="radio3" class="manual-btn"></label>
-                <label for="radio4" class="manual-btn"></label>
-                </div>
+
+            <div id="redes_servidores">
+                <h2>
+                    <p>Para compra e manunteção de servidores Rack ou Torre<br> entre em contato conosco. -></p>
+                    <a href="https://api.whatsapp.com/send/?phone=55085997946214&text&type=phone_number&app_absent=0"><button>Saiba Mais</button>
+                    </a>
+                </h2>
+                <h3>
+                    <p>Para compra de servidores do tipo Rack ou Torre <br> veja nosso estoque de servidores. -></p>
+                    <a href="http://localhost/Projeto%20CRT/pages/produtos.php?produto=Servidor&x=24&y=21"><button>Servidores</button></a>
+                </h3>
+            </div>
 
         </div>
-
-
+        </div>
     </main>
     <?php include_once("../_incluir/rodape.php") ?>
 </body>
