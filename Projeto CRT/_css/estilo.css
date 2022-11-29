@@ -67,7 +67,7 @@ div#redes_servidores {
     top: 680px;
     left: 245px;
     width: 810px;
-    height: 170px;
+    height: 200px;
     background-color: rgb(240, 240, 240);
     border: 1px solid rgba(0, 0, 0, 0.125);
         border-radius: 0.25rem;
@@ -96,7 +96,7 @@ div#redes_servidores h3 p {
     position: absolute;
     color: #252525;
     left: 20px;
-    top: 70px;
+    top: 5em;
     font-family: apple-system,
             BlinkMacSystemFont,
             "Segoe UI",
@@ -117,8 +117,8 @@ div#redes_servidores h2 button {
     position: absolute;
     color: #00488b;
     height: 30px;
-    top: 25px;
-    left: 600px;
+    top: 2.2em;
+    right: 4.5em;
     padding-left: 7px;
     padding-right: 6px;
     border-radius: 5px;
@@ -145,8 +145,8 @@ div#redes_servidores h3 button {
     position: absolute;
     color: #00488b;
     height: 30px;
-    top: 110px;
-    left: 600px;
+    bottom: 2em;
+    right: 4.5em;
     border-radius: 3px;
     padding-left: 8px;
     padding-right: 8px;
@@ -186,8 +186,8 @@ main img.download {
 
 main img.cada_produtos {
     position: absolute;
-    bottom: -110px;
-    left: 48px;
+    top: 44.4em;
+    left: 3.5em;
 }
 main img.produtos {
     position: relative;
@@ -458,7 +458,9 @@ div#inst_programas h3 button:hover {
             display: none;
             left: 0px;
             position: absolute;
-            border-radius: 1px;
+            border-radius: 2px;
+                border: 1.5px solid rgba(0, 16, 49, 0.185);
+                border-radius: 0.25rem;
             
         }
         
@@ -1143,8 +1145,8 @@ div.contato {
     left: 48.8em;
     bottom: 0.3cm;
     width: 16.6em;
-    height: 10em;
-    background-color: #e6e6e6c9;
+    height: 8em;
+    background-color: #f3f3f367;
     border: 0.5px solid rgba(0, 0, 0, 0.219);
     border-radius: 0.25rem;
 }
