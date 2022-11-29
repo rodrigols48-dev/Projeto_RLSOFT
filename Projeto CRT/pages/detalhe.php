@@ -62,7 +62,7 @@ if (!$detalhe) {
                 <li><b>Descrição: </b><br><?php echo $descricao ?></li>
                 <br><br><br><br><br><br><br>
                 <li><b>Código de Barra: </b><?php echo $codigobarra ?></li>
-                <li><b>Tempo de Entrega: </b><?php echo $tempoentrega ?></li>
+                <li><b>Tempo de Entrega(em dia): </b><?php echo $tempoentrega ?></li>
                 <li><b>Preço Revenda: </b><?php echo real_format($precorevenda) ?></li>
                 <li><b>Preço Unitário: </b><?php echo real_format($precounitario) ?></li>
                 <li><b>Estoque: </b><?php echo $estoque ?></li>

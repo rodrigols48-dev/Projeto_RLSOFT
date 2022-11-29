@@ -1,28 +1,21 @@
-$(document).ready(function () {
 
-    var slids = $(".div-slider [type=radio]"); // busca os radios na div
-    var slids_len = slids.length; // conta o número de radios
-    var intervalo = 2; // intervalo em segundos
+/*  var count = 1;
+    var objeto = document.querySelector("radio1");
+    objeto.setAttribute("checked", true);
 
-    function rodar() {
-        var slids_ativo = $(".div-slider [type=radio]:checked")
-            .attr("id")
-            .match(/\d+/)[0]; // pega o valor numérico do id do radio checado
+    //document.getElementById("radio1").checked = true;
 
-        if (slids_ativo == slids_len) slids_ativo = 0; // se estiver no último slide, volta pro primeiro
-
-        slids.eq(slids_ativo).prop("checked", true); // checa o radio da vez
+function nextImage() {
+    count++;
+    if (count > 4) {
+        count = 1;
     }
 
-    var tempo = setInterval(rodar, intervalo * 1000); // inicia o temporizador
+    objeto = document.getElementById("radio2" + count);
+    objeto.setAttribute("checked", true);
+}
 
-    $(".div-slider").hover(
-        function () { // função quando entra o mouse
-            clearInterval(tempo); // cancela o temporizador
-        },
-        function () { // função quando retira o mouse
-            tempo = setInterval(rodar, intervalo * 1000); // reinicia o temporizador
-        }
-    );
-
-});
+setInterval(function () {
+    // nextImage();
+    alert('teste')
+}, 2000); */

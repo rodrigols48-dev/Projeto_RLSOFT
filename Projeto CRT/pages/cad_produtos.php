@@ -15,11 +15,11 @@ if (isset($_POST["codigobarra"])) {
     $precorevenda     = $_POST["precorevenda"];
     $precounitario    = $_POST["precounitario"];
     $estoque          = $_POST["estoque"];
-    $categoriaID      = $_POST["categoriaID"];
+    $categorias      =  $_POST["categorias"];
 
     $inserir     = "INSERT INTO produtos ";
     $inserir    .= " ( nomeproduto, descricao, codigobarra, tempoentrega, precorevenda, precounitario, estoque, categoriaID)";
-    $inserir    .= " VALUES ('$nomeproduto','$descricao','$codigobarra', $tempoentrega, $precorevenda, $precounitario, $estoque, $categoriaID)";
+    $inserir    .= " VALUES ('$nomeproduto','$descricao','$codigobarra', $tempoentrega, $precorevenda, $precounitario, $estoque, $categorias)";
 
     $operacao_inserir = mysqli_query($conecta, $inserir);
     if (!$operacao_inserir) {
@@ -27,6 +27,8 @@ if (isset($_POST["codigobarra"])) {
     } else {
         header("location:produtos.php");
     }
+
+    echo "<script>console.log($nomeproduto)</script>";
 }
 
 // selecao de estados
@@ -57,17 +59,17 @@ if (!$linha_categoriaID) {
     <?php include_once("../_incluir/funcoes.php") ?>
     <main>
         <div id="janela_cad_prod">
-            <form action="produtos.php" method="post">
+            <form action="cad_produtos.php" method="post">
                 <h2>CADASTRAR PRODUTO</h2>
 
-                <label class="produto">Nome do Produto:</label><input type="text" name="nomeproduto" placeholder="Nome do Produto" required><br>
-                <label class="produto">Descrição:</label><input type="text" name="descricao" placeholder="Descrição" required><br>
-                <label class="produto">Código de barra:</label><input type="text" name="codigobarra" placeholder="Código de Barra" required><br>
-                <label class="produto">tempo de entrega:</label><input type="number" name="tempoentrega" placeholder="Tempo entrega" required><br>
-                <label class="produto">Preço de revenda:</label><input type="number" name="precorevenda" placeholder="preço Revenda" required><br>
-                <label class="produto">Preço Unitário:</label><input type="number" name="precounitario" placeholder="Preço Unitario" required><br>
-                <label class="produto">Estoque:</label><input type="number" name="estoque" placeholder="Estoque" required><br>
-                <label class="produto">Categoria:</label><select name="categoriaID">
+                <label class="produto">Nome do Produto:</label><input  type="text"   name="nomeproduto"   placeholder="Nome do Produto" required><br>
+                <label class="produto">Descrição:</label><input        type="text"   name="descricao"     placeholder="Descrição" required><br>
+                <label class="produto">Código de barra:</label><input  type="text"   name="codigobarra"   placeholder="Código de Barra" required><br>
+                <label class="produto">tempo de entrega:</label><input type="number" name="tempoentrega"  placeholder="Tempo entrega" required><br>
+                <label class="produto">Preço de revenda:</label><input type="number" name="precorevenda"  placeholder="preço Revenda" required><br>
+                <label class="produto">Preço Unitário:</label><input   type="number" name="precounitario" placeholder="Preço Unitario" required><br>
+                <label class="produto">Estoque:</label><input          type="number" name="estoque"       placeholder="Estoque" required><br>
+                <label class="produto">Categoria:</label><select name="categorias">
 
                     <?php while ($linha = mysqli_fetch_assoc($linha_categoriaID)) { ?>
                         <option value="<?php echo $linha["categoriaID"]; ?>">

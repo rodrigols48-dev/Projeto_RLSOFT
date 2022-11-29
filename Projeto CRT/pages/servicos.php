@@ -22,7 +22,7 @@ session_start();
     <?php include_once("../_incluir/funcoes.php") ?>
     <main>
         <div id="servicos">
-            <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+           
             <script type="text/javascript" src="script.js"></script>
 
             <div class="slider_servicos">
@@ -70,12 +70,12 @@ session_start();
 
             <div id="redes_servidores">
                 <h2>
-                    <p>Para compra e manunteção de servidores Rack ou Torre<br> entre em contato conosco. -></p>
+                    <p>Oferecemos nossos serviços de instalação, manutenção e<br> atualização de servidores.<br> Para mais informações clique no botão "Saiba Mais".</p>
                     <a href="https://api.whatsapp.com/send/?phone=55085997946214&text&type=phone_number&app_absent=0"><button>Saiba Mais</button>
                     </a>
                 </h2>
                 <h3>
-                    <p>Para compra de servidores do tipo Rack ou Torre <br> veja nosso estoque de servidores. -></p>
+                    <p>Para compra de servidores do tipo Rack ou Torre <br> veja nosso estoque de servidores.</p>
                     <a href="http://localhost/Projeto%20CRT/pages/produtos.php?produto=Servidor&x=24&y=21"><button>Servidores</button></a>
                 </h3>
             </div>
