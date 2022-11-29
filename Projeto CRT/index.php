@@ -14,7 +14,7 @@ session_start();
     <title>Home - RLSoft</title>
 
     <link href="_css/estilo.css" rel="stylesheet">
-    <script type="text/Javascript" src="login/script.js"></script>
+    <script type="text/Javascript" src="pages/script.js"></script>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
 </head>
@@ -82,21 +82,21 @@ session_start();
 
             <img class="cada_produtos" src="_assets/cadastro_produtos (1).png">
             <div class="cadastro_produtos">
-            <h1>Atualize seu estoque de produtos utilizando nosso formulário de cadastro de produtos.<br></h1>
-            <a href="pages/cad_produtos.php"><img id="form1" src="_assets/formulario1.png" title="Clique aqui para ir ao formulário!"></a>
+                <h1>Atualize seu estoque de produtos utilizando nosso formulário de cadastro de produtos.<br></h1>
+                <a href="pages/cad_produtos.php"><img id="form1" src="_assets/formulario1.png" title="Clique aqui para ir ao formulário!"></a>
             </div>
 
             <img id="sobre" src="_assets/quem_somos (1).png">
             <div class="sobre">
-            <h3>A RLSoft é especializada na criação e venda de produtos de alta qualidade, de gabinetes a servidores de última geração.</h3>
-            <h4>Oferecemos também nosso sistema de cadastro de produtos e nossos serviços de manutenção de softwares, instalação e atualização de programas. </h4>
+                <h3>A RLSoft é especializada na criação e venda de produtos de alta qualidade, de gabinetes a servidores de última geração.</h3>
+                <h4>Oferecemos também nosso sistema de cadastro de produtos e nossos serviços de manutenção de softwares, instalação e atualização de programas. </h4>
             </div>
 
             <img id="contato" src="_assets/contato_entrar-removebg-preview.png">
             <div class="contato">
-            <h4>Entre em contato:<br><br>whatsapp:(85) 99794-6214<br>
-                ou<br>com nosso telefone: (85) 3482-1547
-            </h4>
+                <h4>Entre em contato:<br><br>whatsapp:(85) 99794-6214<br>
+                    ou<br>com nosso telefone: (85) 3482-1547
+                </h4>
 
             </div>
         </div>

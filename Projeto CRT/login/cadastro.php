@@ -2,7 +2,7 @@
 
 <?php
 // insercao no banco
-if (isset($_POST["cidade"])) {
+if (isset($_POST["email"])) {
     $nomecompleto   = $_POST["nomecompleto"];
     $usuario        = $_POST["usuario"];
     $senha          = $_POST["senha"];
@@ -11,15 +11,15 @@ if (isset($_POST["cidade"])) {
     $estados        = $_POST["estados"];
     $telefone       = $_POST["telefone"];
 
-    $inserir     = "INSERT INTO 'clientes' ";
-    $inserir    .= " (nomecompleto, usuario, senha, email, cidade, estados, telefone)";
+    $inserir     = "INSERT INTO clientes ";
+    $inserir    .= " (nomecompleto, usuario, senha, email, cidade, estadoID, telefone)";
     $inserir    .= " VALUES ('$nomecompleto','$usuario','$senha','$email','$cidade','$estados','$telefone')";
 
     $operacao_inserir = mysqli_query($conecta, $inserir);
     if (!$operacao_inserir) {
         die("Falha na inserção");
     } else {
-        echo ("Usuario cadastrado com sucesso!");
+        header ("location:login.php");
     }
 }
 
@@ -53,18 +53,17 @@ if (!$linha_estados) {
 <body background="../_assets/167-1677324_simple-dark-blue-background-images-dark-blue-background.jpg">
 
 
-    <?php include_once("../_incluir/funcoes.php"); ?>
+    <?php include_once("../_incluir/funcoes.php");?>
 
     <main>
         <div style="background-color: rgba(0, 0, 20, 0.5)" id="janela_cadastro">
-            <form action="login.php" method="post">
+            <form method="post" action="cadastro.php">
                 <h2>CADASTRO</h2>
 
                 <label class="conta">Nome Completo:</label><input type="text" name="nomecompleto" placeholder="Nome Completo" required><br>
                 <label class="conta">Usuário:</label><input type="text" name="usuario" placeholder="Usuario" required><br>
                 <label class="conta">Senha:</label><input type="password" name="senha" placeholder="Senha" required><br>
                 <label class="conta">Email:</label><input type="email" name="email" placeholder="Email" required><br>
-                <label class="conta">Telefone:</label><input type="text" name="telefone" placeholder="Telefone" required><br>
                 <label class="conta">Cidade:</label><input type="text" name="cidade" placeholder="Cidade" required><br>
                 <label class="conta">Estado:</label><select name="estados">
 
@@ -74,12 +73,14 @@ if (!$linha_estados) {
                         </option>
                     <?php } ?>
                 </select><br>
+                <label class="conta">Telefone:</label><input type="text" name="telefone" placeholder="Telefone" required><br>
 
-                <input type="submit" value="Cadastrar">
+                <input type="submit" name="enviar" value="Cadastrar">
                 <input type="button" value="Voltar" onclick="window.location.replace('login.php')">
 
 
             </form>
+           
         </div>
     </main>
     <?php include_once("../login/rodape_login.php"); ?>
