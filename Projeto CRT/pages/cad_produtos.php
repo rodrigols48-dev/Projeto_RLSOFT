@@ -1,4 +1,6 @@
 <?php require_once("../../BD/conexao/conexao.php") ?>
+<?php include_once("../_incluir/funcoes.php") ?>
+<?php include_once("../_incluir/Upload.php") ?>
 
 <?php
 // iniciar variavel de sessao
@@ -7,29 +9,74 @@ session_start();
 
 <?php
 // insercao no banco
-if (isset($_POST["codigobarra"])) {
-    $nomeproduto      = $_POST["nomeproduto"];
-    $descricao        = $_POST["descricao"];
-    $codigobarra      = $_POST["codigobarra"];
-    $tempoentrega     = $_POST["tempoentrega"];
-    $precorevenda     = $_POST["precorevenda"];
-    $precounitario    = $_POST["precounitario"];
-    $estoque          = $_POST["estoque"];
-    $categorias      =  $_POST["categorias"];
+try {
 
-    $inserir     = "INSERT INTO produtos ";
-    $inserir    .= " ( nomeproduto, descricao, codigobarra, tempoentrega, precorevenda, precounitario, estoque, categoriaID)";
-    $inserir    .= " VALUES ('$nomeproduto','$descricao','$codigobarra', $tempoentrega, $precorevenda, $precounitario, $estoque, $categorias)";
+    if (isset($_POST["codigobarra"])) {
+        $nomeproduto      = $_POST["nomeproduto"];
+        $descricao        = $_POST["descricao"];
+        $codigobarra      = $_POST["codigobarra"];
+        $tempoentrega     = $_POST["tempoentrega"];
+        $precorevenda     = $_POST["precorevenda"];
+        $precounitario    = $_POST["precounitario"];
+        $estoque          = $_POST["estoque"];
+        $categorias       = $_POST["categorias"];
 
-    $operacao_inserir = mysqli_query($conecta, $inserir);
-    if (!$operacao_inserir) {
-        die("Falha na inserção");
-    } else {
-        header("location:produtos.php");
+        $inserir     = "INSERT INTO produtos ";
+        $inserir    .= " ( nomeproduto, descricao, codigobarra, tempoentrega, precorevenda, precounitario, estoque, categoriaID)";
+        $inserir    .= " VALUES ('$nomeproduto','$descricao','$codigobarra', $tempoentrega, $precorevenda, $precounitario, $estoque, $categorias)";
+        $operacao_inserir = mysqli_query($conecta, $inserir);
+
+        if (!$operacao_inserir) {
+            die("Falha na inserção");
+        } else {
+            $ProdutoID = "SELECT Max(produtoID) FROM produtos";
+            $linha_result = mysqli_query($conecta, $ProdutoID);
+            if (!$linha_result) {
+                die("erro no banco");
+            } else {
+
+                while ($fetch = mysqli_fetch_row($linha_result)) {
+                    $ProdutoID = $fetch[0];
+                }
+
+                if ($ProdutoID != '') {
+                    echo "<script>alert($ProdutoID)</script>";
+                }
+
+                for ($i = 1; $i < 3; $i++) {
+                    echo "<script>alert($i)</script>";
+
+                    if ($i == 1) {
+                        $tamanho = strlen($_FILES['arquivo-imagem-g']['name']) - 4;
+                        $nome_completo = "images/produtos_imagem/" . $_FILES['arquivo-imagem-g']['name'];
+                        $nome_produto = substr($_FILES['arquivo-imagem-g']['name'], 0, $tamanho);
+                        $variacao = 'arquivo-imagem-g';
+
+                        $clausula = "imagemgrande='" . $nome_completo . "'";
+                    } else {
+                        $tamanho = strlen($_FILES['arquivo-imagem-p']['name']) - 4;
+                        $nome_completo = 'images/produtos_imagem/' . $_FILES['arquivo-imagem-p']['name'];
+                        $nome_produto = substr($_FILES['arquivo-imagem-p']['name'], 0, $tamanho);
+                        $variacao = 'arquivo-imagem-p';
+
+                        $clausula = "imagempequena='" . $nome_completo . "'";
+                    }
+
+                    if (UploadImage('images/produtos_imagem/', $nome_produto, $variacao) == true) {
+                        $alterar = "UPDATE produtos set $clausula where produtoID=" . $ProdutoID;
+                        $operacao_alterar = mysqli_query($conecta, $alterar);
+                    };
+                }
+
+                header("location:produtos.php");
+            }
+        }
     }
-
-    echo "<script>console.log($nomeproduto)</script>";
+} catch (Exception $e) {
+    echo 'Exceção capturada: ',  $e->getMessage(), "\n";
 }
+
+
 
 // selecao de estados
 $categoriaID = "SELECT nomecategoria, categoriaID FROM categorias";
@@ -56,19 +103,23 @@ if (!$linha_categoriaID) {
 
 <body background="../_assets/background-pc.jpg">
     <?php include_once("../_incluir/topo.php") ?>
-    <?php include_once("../_incluir/funcoes.php") ?>
+
     <main>
         <div id="janela_cad_prod">
-            <form action="cad_produtos.php" method="post">
+            <form action="cad_produtos.php" method="post" enctype="multipart/form-data">
                 <h2>CADASTRAR PRODUTO</h2>
 
-                <label class="produto">Nome do Produto:</label><input  type="text"   name="nomeproduto"   placeholder="Nome do Produto" required><br>
-                <label class="produto">Descrição:</label><input        type="text"   name="descricao"     placeholder="Descrição" required><br>
-                <label class="produto">Código de barra:</label><input  type="text"   name="codigobarra"   placeholder="Código de Barra" required><br>
-                <label class="produto">tempo de entrega:</label><input type="number" name="tempoentrega"  placeholder="Tempo entrega" required><br>
-                <label class="produto">Preço de revenda:</label><input type="number" name="precorevenda"  placeholder="preço Revenda" required><br>
-                <label class="produto">Preço Unitário:</label><input   type="number" name="precounitario" placeholder="Preço Unitario" required><br>
-                <label class="produto">Estoque:</label><input          type="number" name="estoque"       placeholder="Estoque" required><br>
+                <label class="produto">Nome do Produto:</label><input type="text" name="nomeproduto" placeholder="Nome do Produto" required><br>
+                <label class="produto">Descrição:</label><input type="text" name="descricao" placeholder="Descrição" required><br>
+                <label class="produto">Código de barra:</label><input type="text" name="codigobarra" placeholder="Código de Barra" required><br>
+                <label class="produto">tempo de entrega:</label><input type="number" name="tempoentrega" placeholder="Tempo entrega(em dia)" required><br>
+                <label class="produto">Preço de revenda:</label><input type="number" name="precorevenda" placeholder="preço Revenda" required><br>
+                <label class="produto">Preço Unitário:</label><input type="number" name="precounitario" placeholder="Preço Unitario" required><br>
+                <label class="produto">Estoque:</label><input type="number" name="estoque" placeholder="Estoque" required><br>
+                <input type="file" name="arquivo-imagem-g" accept="image/png, image/jpeg, image/gif"><br>
+                <input type="file" name="arquivo-imagem-p" accept="image/png, image/jpeg, image/gif"><br>
+
+                <input type="hidden" name="MAX_FILE_SIZE" value="45000000">
                 <label class="produto">Categoria:</label><select name="categorias">
 
                     <?php while ($linha = mysqli_fetch_assoc($linha_categoriaID)) { ?>
@@ -83,6 +134,7 @@ if (!$linha_categoriaID) {
 
         </div>
         </form>
+
     </main>
     <?php include_once("../_incluir/rodape.php") ?>
 </body>
