@@ -1,7 +1,7 @@
-body { 
-    margin:0; 
+body {
+    margin: 0;
     padding: 0;
-    background-color: #fafafa; 
+    background-color: #fafafa;
     min-height: 100px;
     max-height: 1500px;
 
@@ -22,15 +22,16 @@ div.home {
 .slider_home {
     position: absolute;
     left: 4%;
-    top:23.5%;
+    top: 23.5%;
     margin: 0 auto;
     width: 800px;
     height: 500px;
     padding: 0;
     overflow: hidden;
     border: 1px solid rgba(0, 0, 0, 0.125);
-        border-radius: 0.25rem;
+    border-radius: 0.25rem;
 }
+
 /**--Fim Slides Inicial--**/
 
 /**--Slides Serviços--**/
@@ -43,8 +44,9 @@ div.home {
     overflow: hidden;
     border-radius: 2px;
     border: 1.5px solid rgba(0, 0, 0, 0.125);
-        border-radius: 0.25rem;
+    border-radius: 0.25rem;
 }
+
 /**--Fim Slides Serviços--**/
 
 /**--Programas--**/
@@ -55,8 +57,9 @@ div#programas {
     position: absolute;
     top: 90px;
     left: 245px;
-    
+
 }
+
 /**-- Fim Programas--**/
 
 /**--Serviços/info servidores-redes--**/
@@ -70,7 +73,7 @@ div#redes_servidores {
     height: 200px;
     background-color: rgb(240, 240, 240);
     border: 1px solid rgba(0, 0, 0, 0.125);
-        border-radius: 0.25rem;
+    border-radius: 0.25rem;
 }
 
 div#redes_servidores h2 p {
@@ -79,37 +82,38 @@ div#redes_servidores h2 p {
     left: 20px;
     top: -5px;
     font-family: apple-system,
-            BlinkMacSystemFont,
-            "Segoe UI",
-            Roboto,
-            "Helvetica Neue",
-            Arial,
-            "Noto Sans",
-            sans-serif,
-            "Apple Color Emoji",
-            "Segoe UI Emoji",
-            "Segoe UI Symbol",
-            "Noto Color Emoji";
-            font-size: 20px;
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        "Noto Sans",
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji";
+    font-size: 20px;
 }
+
 div#redes_servidores h3 p {
     position: absolute;
     color: #252525;
     left: 20px;
     top: 5em;
     font-family: apple-system,
-            BlinkMacSystemFont,
-            "Segoe UI",
-            Roboto,
-            "Helvetica Neue",
-            Arial,
-            "Noto Sans",
-            sans-serif,
-            "Apple Color Emoji",
-            "Segoe UI Emoji",
-            "Segoe UI Symbol",
-            "Noto Color Emoji";
-            font-size: 20px;
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        "Noto Sans",
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji";
+    font-size: 20px;
 }
 
 
@@ -125,22 +129,23 @@ div#redes_servidores h2 button {
     border-color: #0026a1;
     background-color: #d8d8d8;
     font-family: apple-system,
-            BlinkMacSystemFont,
-            "Segoe UI",
-            Roboto,
-            "Helvetica Neue",
-            Arial,
-            "Noto Sans",
-            sans-serif,
-            "Apple Color Emoji",
-            "Segoe UI Emoji",
-            "Segoe UI Symbol",
-            "Noto Color Emoji";
-            font-size: 18px;
-            cursor: pointer;
-            transform: scale(1.1);
-                transition: all 0.5s;
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        "Noto Sans",
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji";
+    font-size: 18px;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.5s;
 }
+
 div#redes_servidores h3 button {
     position: absolute;
     color: #00488b;
@@ -153,28 +158,29 @@ div#redes_servidores h3 button {
     border-color: #0026a1;
     background-color: #d8d8d8;
     font-family: apple-system,
-            BlinkMacSystemFont,
-            "Segoe UI",
-            Roboto,
-            "Helvetica Neue",
-            Arial,
-            "Noto Sans",
-            sans-serif,
-            "Apple Color Emoji",
-            "Segoe UI Emoji",
-            "Segoe UI Symbol",
-            "Noto Color Emoji";
-            font-size: 18px;
-            cursor: pointer;
-            transform: scale(1.1);
-                transition: all 0.5s;
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        "Noto Sans",
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji";
+    font-size: 18px;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.5s;
 }
 
 div#redes_servidores h2 button:hover {
-    background-color:#0062be63;
+    background-color: #0062be63;
 }
+
 div#redes_servidores h3 button:hover {
-    background-color:#0062be63;
+    background-color: #0062be63;
 }
 
 /**--Fim Serviços/info servidores-redes--**/
@@ -189,11 +195,13 @@ main img.cada_produtos {
     top: 44.4em;
     left: 3.5em;
 }
+
 main img.produtos {
     position: relative;
     top: 80px;
     right: 20%;
 }
+
 /**--Serviços/info instalaçao programas--**/
 div#inst_programas {
     border-radius: 8px;
@@ -212,37 +220,38 @@ div#inst_programas h2 p {
     left: 20px;
     top: -5px;
     font-family: apple-system,
-            BlinkMacSystemFont,
-            "Segoe UI",
-            Roboto,
-            "Helvetica Neue",
-            Arial,
-            "Noto Sans",
-            sans-serif,
-            "Apple Color Emoji",
-            "Segoe UI Emoji",
-            "Segoe UI Symbol",
-            "Noto Color Emoji";
-            font-size: 20px;
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        "Noto Sans",
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji";
+    font-size: 20px;
 }
+
 div#inst_programas h3 p {
     position: absolute;
     color: #252525;
     left: 20px;
     top: 85px;
     font-family: apple-system,
-            BlinkMacSystemFont,
-            "Segoe UI",
-            Roboto,
-            "Helvetica Neue",
-            Arial,
-            "Noto Sans",
-            sans-serif,
-            "Apple Color Emoji",
-            "Segoe UI Emoji",
-            "Segoe UI Symbol",
-            "Noto Color Emoji";
-            font-size: 20px;
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        "Noto Sans",
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji";
+    font-size: 20px;
 }
 
 
@@ -258,22 +267,23 @@ div#inst_programas h2 button {
     border-color: #0026a1;
     background-color: #d8d8d8;
     font-family: apple-system,
-            BlinkMacSystemFont,
-            "Segoe UI",
-            Roboto,
-            "Helvetica Neue",
-            Arial,
-            "Noto Sans",
-            sans-serif,
-            "Apple Color Emoji",
-            "Segoe UI Emoji",
-            "Segoe UI Symbol",
-            "Noto Color Emoji";
-            font-size: 18px;
-            cursor: pointer;
-            transform: scale(1.1);
-                transition: all 0.5s;
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        "Noto Sans",
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji";
+    font-size: 18px;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.5s;
 }
+
 div#inst_programas h3 button {
     position: absolute;
     color: #00488b;
@@ -286,29 +296,31 @@ div#inst_programas h3 button {
     border-color: #0026a1;
     background-color: #d8d8d8;
     font-family: apple-system,
-            BlinkMacSystemFont,
-            "Segoe UI",
-            Roboto,
-            "Helvetica Neue",
-            Arial,
-            "Noto Sans",
-            sans-serif,
-            "Apple Color Emoji",
-            "Segoe UI Emoji",
-            "Segoe UI Symbol",
-            "Noto Color Emoji";
-            font-size: 18px;
-            cursor: pointer;
-            transform: scale(1.1);
-                transition: all 0.5s;
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        "Noto Sans",
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji";
+    font-size: 18px;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.5s;
 }
 
 div#inst_programas h2 button:hover {
-    background-color:#0062be63;
+    background-color: #0062be63;
 }
+
 div#inst_programas h3 button:hover {
-    background-color:#0062be63;
+    background-color: #0062be63;
 }
+
 /**--Fim Serviços/info instalaçao programas--**/
 
 
@@ -317,7 +329,7 @@ div#inst_programas h3 button:hover {
     width: 400%;
     height: 500px;
     display: flex;
-    }
+}
 
 .slides input {
     display: none;
@@ -341,7 +353,7 @@ div#inst_programas h3 button:hover {
     justify-content: center;
 }
 
-.manual-btn{
+.manual-btn {
     border: 2px solid #FFF;
     padding: 5px;
     border-radius: 10px;
@@ -349,162 +361,172 @@ div#inst_programas h3 button:hover {
     transition: .08s;
 }
 
-.manual-btn:not(:last-child){
+.manual-btn:not(:last-child) {
     margin-right: 40px;
 }
 
-.manual-btn:hover{
+.manual-btn:hover {
     background-color: #FFF;
 }
 
-#radio1:checked ~ .first{
-    margin-left:0;
+#radio1:checked~.first {
+    margin-left: 0;
 }
-#radio2:checked ~ .first{
+
+#radio2:checked~.first {
     margin-left: -25%;
 }
-#radio3:checked ~ .first{
+
+#radio3:checked~.first {
     margin-left: -50%;
 }
-#radio4:checked ~ .first{
+
+#radio4:checked~.first {
     margin-left: -75%;
 }
 
-.navigation-auto div{
+.navigation-auto div {
     border: 2px solid #20a6ff;
     padding: 5px;
     border-radius: 10px;
-    cursor:pointer;
+    cursor: pointer;
     transition: 1s;
 }
 
-.navigation-auto{
-    position:absolute;
+.navigation-auto {
+    position: absolute;
     width: 800px;
     margin-top: 460px;
     display: flex;
     justify-content: center;
 }
 
-.navigation-auto div:not(:last-child){
+.navigation-auto div:not(:last-child) {
     margin-right: 40px;
 }
 
-#radio1:checked ~ .navigation-auto .auto-btn1{
+#radio1:checked~.navigation-auto .auto-btn1 {
     background-color: #FFF;
 }
-#radio2:checked ~ .navigation-auto .auto-btn2{
+
+#radio2:checked~.navigation-auto .auto-btn2 {
     background-color: #FFF;
 }
-#radio3:checked ~ .navigation-auto .auto-btn3{
+
+#radio3:checked~.navigation-auto .auto-btn3 {
     background-color: #FFF;
 }
-#radio4:checked ~ .navigation-auto .auto-btn4{
+
+#radio4:checked~.navigation-auto .auto-btn4 {
     background-color: #FFF;
 }
+
 /**--Fim Slides--**/
 
 /**--barra navegação topo--**/
-        nav {
-            width: 600px;
-            height: 40px;
+nav {
+    width: 600px;
+    height: 40px;
 
-            padding-top: 15px;
-            background-color: #2070b7;
-            position: absolute;
-            left: 11.5cm;
-            margin-bottom: center;
-            margin-top: 4px;
-        }
-    
-        nav ul {
-            width: 600px;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
+    padding-top: 15px;
+    background-color: #2070b7;
+    position: absolute;
+    left: 11.5cm;
+    margin-bottom: center;
+    margin-top: 4px;
+}
 
-        nav ul {
-            list-style-type: none;
-        }
-    
-        nav ul li {
-            position: relative;
-            font-size: 20px;
-            display:inline;
-        }
-        
+nav ul {
+    width: 600px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
-        
-        nav ul li a {
-            font-size: 0.85em;
-            text-decoration: none;
-            display: inline-block;
-            color: #f0f0f0;
-            padding: 5px 30px;
-            text-align: center;
-        }
-    
-        nav ul li a:hover {
-            background-color: #005485;
-        }
-        nav ul li a img{
-           position: relative;
-            top: 5px;
-            left:3px;
-        }
-        /* sub-menu */
-        nav ul ul {
-            display: none;
-            left: 0px;
-            position: absolute;
-            border-radius: 2px;
-                border: 1.5px solid rgba(0, 16, 49, 0.185);
-                border-radius: 0.25rem;
-            
-        }
-        
-        nav ul li:hover ul {
-            background-color: #366d9c;
-        }
+nav ul {
+    list-style-type: none;
+}
 
-        nav ul ul {
-            width: 140.8px;
-        }
+nav ul li {
+    position: relative;
+    font-size: 20px;
+    display: inline;
+}
 
-        nav ul ul li a {
-            display: block;
-            color: #f8f8f8;
-            background-color: #2070b7;
-            border-radius: 1px;
-           
-        }
+
+
+nav ul li a {
+    font-size: 0.85em;
+    text-decoration: none;
+    display: inline-block;
+    color: #f0f0f0;
+    padding: 5px 30px;
+    text-align: center;
+}
+
+nav ul li a:hover {
+    background-color: #005485;
+}
+
+nav ul li a img {
+    position: relative;
+    top: 5px;
+    left: 3px;
+}
+
+/* sub-menu */
+nav ul ul {
+    display: none;
+    left: 0px;
+    position: absolute;
+    border-radius: 2px;
+    border: 1.5px solid rgba(0, 16, 49, 0.185);
+    border-radius: 0.25rem;
+
+}
+
+nav ul li:hover ul {
+    background-color: #366d9c;
+}
+
+nav ul ul {
+    width: 140.8px;
+}
+
+nav ul ul li a {
+    display: block;
+    color: #f8f8f8;
+    background-color: #2070b7;
+    border-radius: 1px;
+
+}
+
 /**--Fim barra navegação topo--**/
 
 /**--cabeçalho--**/
-        header {
-        position: fixed;
-        width:100%;
-        height:67px;
-        background-color:#2071b7;
-        box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);
-        z-index: 9;
+header {
+    position: fixed;
+    width: 100%;
+    height: 67px;
+    background-color: #2071b7;
+    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);
+    z-index: 9;
 }
 
 header #login {
     width: 100%;
     height: 67px;
-   
+
 
 }
 
 div#header_central {
     position: fixed;
-    width:800px;
-    height:55px;
-    margin:0 auto;
+    width: 800px;
+    height: 55px;
+    margin: 0 auto;
     margin-bottom: 2px;
-    
+
 }
 
 
@@ -519,12 +541,13 @@ div#header_inicial {
 
 
 div#header_central img {
-    margin-top:0px;   
+    margin-top: 0px;
 }
 
 div#header_inicial img {
     margin-top: 0px;
 }
+
 /**--saudação--**/
 div#header_saudacao {
     width: 155px;
@@ -532,8 +555,8 @@ div#header_saudacao {
     background-repeat: no-repeat;
     background-position: 113px 30px;
     position: absolute;
-    top:0;
-    right:25px;
+    top: 0;
+    right: 25px;
     padding: 15px;
     padding-right: -30px;
     padding-left: -20px;
@@ -566,8 +589,8 @@ div#header_saudacao h5 {
     font-family: sans-serif;
     font-size: 12.5px;
     font-weight: 100;
-    margin:2px 0 0 0;
-    padding:auto; 
+    margin: 2px 0 0 0;
+    padding: auto;
     text-align: center;
     inline-size: auto;
     color: #f1f1f1;
@@ -584,8 +607,8 @@ div#header_saudacaoinicial h5 {
 }
 
 div#header_saudacao a {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    color:#ff0000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #ff0000;
     padding-left: 18px;
 }
 
@@ -594,15 +617,16 @@ div#header_saudacaoinicial a {
     color: #ff0000;
     padding-left: 18px;
 }
+
 /**--Fim saudação--**/
 /**--Fim cabeçalho--**/
 
 /**--conteudo--**/
 main {
-    width:900px;
-    
-    padding:20px;
-    margin:0 auto;
+    width: 900px;
+
+    padding: 20px;
+    margin: 0 auto;
     min-height: 600px;
     max-height: 1500px;
 }
@@ -613,15 +637,15 @@ footer {
     top: 60px;
     bottom: auto;
     clear: both;
-    width:100%;
+    width: 100%;
     margin: 0 auto;
     height: 45px;
-    border-top:1px solid #525252;
+    border-top: 1px solid #525252;
 }
 
 div#footer_central {
-    width:800px;
-    margin:0 auto;
+    width: 800px;
+    margin: 0 auto;
 }
 
 div#footer_central p {
@@ -637,16 +661,17 @@ div#footer_login p {
     text-align: center;
     color: #d8d8d8;
 }
+
 /**--Fim rodapé--**/
 
 .logo {
-    position:absolute;
+    position: absolute;
     margin-left: auto;
     margin-top: auto;
     background-image: 100%;
 }
 
-main div#pm4r img{
+main div#pm4r img {
     margin-left: 200px;
     width: 600px;
     margin-top: 48px;
@@ -655,8 +680,8 @@ main div#pm4r img{
 
 
 main div.texto1 h2 p {
-   position: absolute;
-text-shadow: 0.1em 0.1em 0.3em rgb(230, 230, 230);
+    position: absolute;
+    text-shadow: 0.1em 0.1em 0.3em rgb(230, 230, 230);
     text-align: center;
     font-size: 20px;
     top: 100px;
@@ -710,49 +735,11 @@ main div#texto2 h3 p {
 main div#sobre {
     height: 1000px;
 }
+
 main div#servicos {
     height: 1000px;
 }
 
-main div#filtro_produto {
-    position:absolute;
-    left: 25px;
-    width: 170px;
-    height: 40px;
-    box-shadow:0.1em 0.1em 0.05em rgb(230, 230, 230);
-    margin-right: 50px;
-    padding-left: 20px;
-    text-align: center;
-    background-color: rgba(209, 208, 208, 0.5);
-    border-top-right-radius: 5px;
-}
-
-main div#filtro_produto form {
-    position: absolute;
-    left: 15px;
-    top: 15px;
-}
-
-main div#filtro_produto form#gab {
-    position:absolute;
-    top: 15px;
-}
-main div#filtro_produto form#mon {
-    position:absolute;
-    top: 35px;
-}
-main div#filtro_produto form#mou {
-    position:absolute;
-    top: 55px;
-}
-main div#filtro_produto form#pla {
-    position:absolute;
-    top: 75px;
-}
-main div#filtro_produto form#ser {
-    position:absolute;
-    top: 95px;
-}
 
 main div#borda_filtro {
     position: absolute;
@@ -770,19 +757,19 @@ main div#filtro_produto h1 p {
     position: absolute;
     color: rgb(48, 48, 48);
     font-family: apple-system,
-            BlinkMacSystemFont,
-            "Segoe UI",
-            Roboto,
-            "Helvetica Neue",
-            Arial,
-            "Noto Sans",
-            sans-serif,
-            "Apple Color Emoji",
-            "Segoe UI Emoji",
-            "Segoe UI Symbol",
-            "Noto Color Emoji";
-        font-size: 21px;
-        
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        "Noto Sans",
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji";
+    font-size: 21px;
+
 }
 
 
@@ -832,12 +819,13 @@ main div#filtro_produto h1 p {
 h5.card-title {
     margin-bottom: 0.5rem;
     margin-top: 0;
-        font-family: inherit;
-        font-weight: 500;
-        line-height: 1.2;
-        color: inherit;
-        font-size: 1.25rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+    font-size: 1.25rem;
 }
+
 .card-subtitle {
     margin-top: -0.375rem;
     margin-bottom: 0;
@@ -1077,6 +1065,7 @@ h5.card-title {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
+
 /*--Fim Card--*/
 
 div.cadastro_produtos {
@@ -1087,13 +1076,14 @@ div.cadastro_produtos {
     width: 570px;
     height: 150px;
     background-image: url("../_assets/gradiente-de-fundo-abstrato-azul-e-branco-400-109806180.jpg");
-        background-position: -10px -10px;
+    background-position: -10px -10px;
     border: 0.5px solid rgba(0, 0, 0, 0.219);
-        border-radius: 0.25rem;
+    border-radius: 0.25rem;
 }
-div.cadastro_produtos h1{
+
+div.cadastro_produtos h1 {
     margin-left: 9px;
-    font-family:'Franklin Gothic Medium',
+    font-family: 'Franklin Gothic Medium',
         'Arial Narrow',
         Arial,
         sans-serif;
@@ -1120,18 +1110,18 @@ div.sobre {
     position: relative;
     bottom: 0.6cm;
     left: 20.7cm;
-    width:230px;
+    width: 230px;
     padding-left: 0.4cm;
     padding-right: 0.4cm;
     height: 9cm;
     background-image: url("../_assets/question-background.png");
     background-position: 70px -160px;
-        border: 0.5px solid rgba(0, 0, 0, 0.219);
-        border-radius: 0.25rem;
-        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-size: 18px;
-            color: #ffeb3b;
-            text-shadow: -0.6px 1px 0px #050505;
+    border: 0.5px solid rgba(0, 0, 0, 0.219);
+    border-radius: 0.25rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    color: #ffeb3b;
+    text-shadow: -0.6px 1px 0px #050505;
 }
 
 img#contato {
@@ -1150,10 +1140,12 @@ div.contato {
     border: 0.5px solid rgba(0, 0, 0, 0.219);
     border-radius: 0.25rem;
 }
+
 div.contato h4 {
     margin-left: 0.6em;
     font-size: 15px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 /*--Fim Programas--*/
 /**--Fim conteudo--**/
