@@ -50,31 +50,6 @@ if (!$resultado) {
             <a href="../pages/produtos.php">limpar filtro</a>
         </div>
 
-        <div id="filtro_produto">
-            <div id="borda_filtro">
-                <h1>
-                    <p>Filtro</p>
-                </h1>
-                <ul>
-                    <form action="produtos.php" id="gab">
-                        <input type="checkbox" name="categoria" value="Gabinete">Gabinete</input>
-                    </form>
-                    <form action="produtos.php" id="mon">
-                        <input type="checkbox" name="categoria" value="Monitor">Monitor</input>
-                    </form>
-                    <form action="produtos.php" id="mou">
-                        <input type="checkbox" name="categoria" value="Mouse">Mouse</input>
-                    </form>
-                    <form action="produtos.php" id="pla">
-                        <input type="checkbox" name="categoria" value="Placa mãe">Placa mãe</input>
-                    </form>
-                    <form action="produtos.php" id="ser">
-                        <input type="checkbox" name="categoria" value="Servidor">Servidor</input>
-                    </form>
-                </ul>
-            </div>
-        </div>
-
 
 
         <div id="listagem_produtos">

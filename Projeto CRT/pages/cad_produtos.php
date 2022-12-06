@@ -11,10 +11,10 @@ session_start();
 // insercao no banco
 try {
 
-    if (isset($_POST["codigobarra"])) {
+    if (isset($_POST["codigoproduto"])) {
         $nomeproduto      = $_POST["nomeproduto"];
         $descricao        = $_POST["descricao"];
-        $codigobarra      = $_POST["codigobarra"];
+        $codigoproduto    = $_POST["codigoproduto"];
         $tempoentrega     = $_POST["tempoentrega"];
         $precorevenda     = $_POST["precorevenda"];
         $precounitario    = $_POST["precounitario"];
@@ -22,8 +22,8 @@ try {
         $categorias       = $_POST["categorias"];
 
         $inserir     = "INSERT INTO produtos ";
-        $inserir    .= " ( nomeproduto, descricao, codigobarra, tempoentrega, precorevenda, precounitario, estoque, categoriaID)";
-        $inserir    .= " VALUES ('$nomeproduto','$descricao','$codigobarra', $tempoentrega, $precorevenda, $precounitario, $estoque, $categorias)";
+        $inserir    .= " ( nomeproduto, descricao, codigoproduto, tempoentrega, precorevenda, precounitario, estoque, categoriaID)";
+        $inserir    .= " VALUES ('$nomeproduto','$descricao','$codigoproduto', $tempoentrega, $precorevenda, $precounitario, $estoque, $categorias)";
         $operacao_inserir = mysqli_query($conecta, $inserir);
 
         if (!$operacao_inserir) {
@@ -110,14 +110,14 @@ if (!$linha_categoriaID) {
                 <h2>CADASTRAR PRODUTO</h2>
 
                 <label class="produto">Nome do Produto:</label><input type="text" name="nomeproduto" placeholder="Nome do Produto" required><br>
-                <label class="produto">Descrição:</label><input type="text" name="descricao" placeholder="Descrição" required><br>
-                <label class="produto">Código de barra:</label><input type="text" name="codigobarra" placeholder="Código de Barra" required><br>
+                <label class="produto">Descrição:</label><textarea id="descricao" name="descricao" required></textarea><br>
+                <label class="produto">Código do Produto:</label><input type="text" name="codigoproduto" placeholder="Código do Produto" required><br>
                 <label class="produto">tempo de entrega:</label><input type="number" name="tempoentrega" placeholder="Tempo entrega(em dia)" required><br>
                 <label class="produto">Preço de revenda:</label><input type="number" name="precorevenda" placeholder="preço Revenda" required><br>
                 <label class="produto">Preço Unitário:</label><input type="number" name="precounitario" placeholder="Preço Unitario" required><br>
                 <label class="produto">Estoque:</label><input type="number" name="estoque" placeholder="Estoque" required><br>
-                <input type="file" name="arquivo-imagem-g" accept="image/png, image/jpeg, image/gif"><br>
-                <input type="file" name="arquivo-imagem-p" accept="image/png, image/jpeg, image/gif"><br>
+                <label class="produto">Imagem Grande:</label><input type="file" name="arquivo-imagem-g" accept="image/png, image/jpeg, image/gif"><br>
+                <label class="produto">Imagem Pequena:</label><input type="file" name="arquivo-imagem-p" accept="image/png, image/jpeg, image/gif"><br>
 
                 <input type="hidden" name="MAX_FILE_SIZE" value="45000000">
                 <label class="produto">Categoria:</label><select name="categorias">

@@ -26,7 +26,7 @@ if (!$detalhe) {
     $produtoID      = $dados_detalhe["produtoID"];
     $nomeproduto    = $dados_detalhe["nomeproduto"];
     $descricao      = $dados_detalhe["descricao"];
-    $codigobarra    = $dados_detalhe["codigobarra"];
+    $codigoproduto    = $dados_detalhe["codigoproduto"];
     $tempoentrega   = $dados_detalhe["tempoentrega"];
     $precorevenda   = $dados_detalhe["precorevenda"];
     $precounitario  = $dados_detalhe["precounitario"];
@@ -59,9 +59,9 @@ if (!$detalhe) {
                 <li>
                     <h2><?php echo $nomeproduto ?></h2>
                 </li>
-                <li><b>Descrição: </b><br><?php echo $descricao ?></li>
+                <li class="descricao"><b>Descrição: </b><br><?php echo $descricao ?></li>
                 <br><br><br><br><br><br><br>
-                <li><b>Código de Barra: </b><?php echo $codigobarra ?></li>
+                <li><b>Código do Produto: </b><?php echo $codigoproduto ?></li>
                 <li><b>Tempo de Entrega(em dia): </b><?php echo $tempoentrega ?></li>
                 <li><b>Preço Revenda: </b><?php echo real_format($precorevenda) ?></li>
                 <li><b>Preço Unitário: </b><?php echo real_format($precounitario) ?></li>
