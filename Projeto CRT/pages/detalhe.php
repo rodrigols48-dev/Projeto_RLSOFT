@@ -68,6 +68,7 @@ if (!$detalhe) {
                 <li><b>Estoque: </b><?php echo $estoque ?></li>
             </ul>
             <input type="button" value="Voltar" onclick="window.location.replace('produtos.php')">
+
         </div>
 
 
