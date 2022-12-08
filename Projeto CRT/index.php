@@ -81,25 +81,42 @@ session_start();
             </div>
 
             <img class="cada_produtos" src="_assets/cadastro_produtos (1).png">
+
             <div class="cadastro_produtos">
                 <h1>Atualize seu estoque de produtos utilizando nosso formulário de cadastro de produtos.<br></h1>
                 <a href="pages/cad_produtos.php"><img id="form1" src="_assets/formulario1.png" title="Clique aqui para ir ao formulário!"></a>
             </div>
 
             <img id="sobre" src="_assets/quem_somos (1).png">
+
             <div class="sobre">
                 <h3>A RLSoft é especializada na criação e venda de produtos de alta qualidade, de gabinetes a servidores de última geração.</h3>
                 <h4>Oferecemos também nosso sistema de cadastro de produtos e nossos serviços de manutenção de softwares, instalação e atualização de programas. </h4>
             </div>
 
             <img id="contato" src="_assets/contato_entrar-removebg-preview.png">
+
             <div class="contato">
-                <h4>Entre em contato:<br><br>whatsapp:(85) 99794-6214<br>
+                <h4>whatsapp:(85) 99794-6214<br>
                     ou<br>com nosso telefone: (85) 3482-1547
                 </h4>
 
             </div>
-           
+
+            <img class="servicosimg" src="_assets/Servicos (1).png">
+
+            <div class="serv">
+                <img id="monitor48" src="_assets/icons8-monitor-48.png">
+                <h2>Instalação e Manutenção <br> de computadores</h2>
+
+                <div class="servidorgrp">
+                    <img id="gservidor" src="_assets/icons8-suporte-ao-cliente-100.png">
+                    <h3>Suporte ao Cliente</h3>
+                </div>
+
+
+            </div>
+
         </div>
 
     </main>
