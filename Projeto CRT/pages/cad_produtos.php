@@ -1,13 +1,18 @@
-<?php require_once("../../BD/conexao/conexao.php") ?>
-<?php include_once("../_incluir/funcoes.php") ?>
-<?php include_once("../_incluir/Upload.php") ?>
-
 <?php
-// iniciar variavel de sessao
-session_start();
-?>
+if (session_status() !== PHP_SESSION_ACTIVE) { //Verificar se a sessão não já está aberta.
+    session_cache_expire(60); //Definindo o prazo para a cache expirar em 60 minutos.
+    session_start(); //inicia a sessão.
 
-<?php
+    if ($_SESSION['user_portal'] == '') {
+        // Código para redirecionar para pagina de login
+        header("location:/projetoAndesRodrigo/login/login.php");
+    }
+}
+
+require_once("../BD/conexao/conexao.php");
+include_once("../_incluir/funcoes.php");
+include_once("../_incluir/Upload.php");
+
 // insercao no banco
 try {
 
@@ -84,8 +89,6 @@ $linha_categoriaID = mysqli_query($conecta, $categoriaID);
 if (!$linha_categoriaID) {
     die("erro no banco");
 }
-
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -103,7 +106,6 @@ if (!$linha_categoriaID) {
 
 <body background="../_assets/background-pc.jpg">
     <?php include_once("../_incluir/topo.php") ?>
-
     <main>
         <div id="janela_cad_prod">
             <form action="cad_produtos.php" method="post" enctype="multipart/form-data">
@@ -140,7 +142,6 @@ if (!$linha_categoriaID) {
 </body>
 
 </html>
-
 <?php
 // Fechar conexao
 mysqli_close($conecta);

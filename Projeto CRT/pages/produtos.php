@@ -1,11 +1,15 @@
-<?php require_once("../../BD/conexao/conexao.php"); ?>
-
 <?php
-// iniciar variavel de sessao
-session_start();
-if (!isset($_SESSION["user_portal"])) {
-    header("Location:../index.php");
+if (session_status() !== PHP_SESSION_ACTIVE) { //Verificar se a sessão não já está aberta.
+    session_cache_expire(60); //Definindo o prazo para a cache expirar em 60 minutos.
+    session_start(); //inicia a sessão.
+
+    if ($_SESSION['user_portal'] == '') {
+        // Código para redirecionar para pagina de login
+        header("location:/projetoAndesRodrigo/login/login.php");
+    }
 }
+
+require_once("../BD/conexao/conexao.php");
 
 // Determinar localidade BR
 setlocale(LC_ALL, 'pt_BR');
@@ -83,7 +87,6 @@ if (!$resultado) {
 <?php include_once("../_incluir/rodape.php") ?>
 
 </html>
-
 <?php
 // Fechar conexao
 mysqli_close($conecta);

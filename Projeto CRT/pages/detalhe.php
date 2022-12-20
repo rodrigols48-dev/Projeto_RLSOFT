@@ -1,11 +1,16 @@
-<?php require_once("../../BD/conexao/conexao.php") ?>
-
 <?php
-// iniciar variavel de sessao
-session_start();
-?>
+if (session_status() !== PHP_SESSION_ACTIVE) { //Verificar se a sessão não já está aberta.
+    session_cache_expire(60); //Definindo o prazo para a cache expirar em 60 minutos.
+    session_start(); //inicia a sessão.
 
-<?php
+    if ($_SESSION['user_portal'] == '') {
+        // Código para redirecionar para pagina de login
+        header("location:../projetoAndesRodrigo/login/login.php");
+    }
+}
+
+require_once("../BD/conexao/conexao.php");
+
 if (isset($_GET["codigo"])) {
     $produto_id = $_GET["codigo"];
 } else {

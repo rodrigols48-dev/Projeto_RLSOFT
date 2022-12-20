@@ -1,8 +1,15 @@
-<?php require_once("../../BD/conexao/conexao.php") ?>
-
 <?php
-// iniciar variavel de sessao
-session_start();
+if (session_status() !== PHP_SESSION_ACTIVE) { //Verificar se a sessão não já está aberta.
+    session_cache_expire(60); //Definindo o prazo para a cache expirar em 60 minutos.
+    session_start(); //inicia a sessão.
+
+    if ($_SESSION['user_portal'] == '') {
+        // Código para redirecionar para pagina de login
+        header("location:/projetoAndesRodrigo/login/login.php");
+    }
+}
+
+require_once("../BD/conexao/conexao.php");
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -22,7 +29,7 @@ session_start();
     <?php include_once("../_incluir/funcoes.php") ?>
     <main>
         <div id="servicos">
-           
+
             <script type="text/javascript" src="script.js"></script>
 
             <div class="slider_servicos">
@@ -76,7 +83,7 @@ session_start();
                 </h2>
                 <h3>
                     <p>Para compra de servidores do tipo Rack ou Torre <br> veja nosso estoque de servidores.</p>
-                    <a href="http://localhost/Projeto%20CRT/pages/produtos.php?produto=Servidor&x=24&y=21"><button>Servidores</button></a>
+                    <a href="produtos.php?produto=Servidor&x=0&y=0"><button>Servidores</button></a>
                 </h3>
             </div>
 
