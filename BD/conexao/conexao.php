@@ -1,9 +1,9 @@
 <?php
 // PASSO 1
-$servidor = "localhost";
-$usuario = "root";
-$senha = "";
-$banco = "andes";
+$servidor = "crtsistemas.com.br";
+$usuario = "crtsis22_andes_rodrigo";
+$senha = "RO3258946147";
+$banco = "crtsis22_andes_rodrigo";
 $conecta = mysqli_connect($servidor, $usuario, $senha, $banco);
 
 // PASSO 2
