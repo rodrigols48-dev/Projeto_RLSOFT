@@ -202,6 +202,71 @@ main img.produtos {
     right: 20%;
 }
 
+
+main img.servicosimg {
+    position: relative;
+    bottom: 21em;
+    right: 16em;
+}
+
+main div.serv {
+    position: relative;
+    bottom: 21em;
+    width: 15cm;
+    height: 5cm;
+    right: 10.8em;
+
+    background-image: url("../_assets/4096x3072_color-background-blue-bright-abstraction.jpg");
+
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+
+}
+
+main div.serv h2 {
+    position: relative;
+    top: 0.8em;
+    left: 1.5em;
+    font-size: 19px;
+    font-family: 'Franklin Gothic Medium',
+        'Arial Narrow',
+        Arial,
+        sans-serif;
+    color: #ffd900;
+    text-shadow: -0.6px 1px 0px #050505;
+}
+
+main div.serv h3 {
+    position: relative;
+    bottom: 8.5em;
+    left: 16em;
+    font-size: 19px;
+    font-family: 'Franklin Gothic Medium',
+        'Arial Narrow',
+        Arial,
+        sans-serif;
+    color: #ffd900;
+    text-shadow: -0.6px 1px 0px #050505;
+}
+
+
+main div.serv img#monitor48 {
+    position: relative;
+    top: 0.6em;
+    left: 5em;
+    width: 90px;
+    height: 90px;
+}
+
+main div.servidorgrp img#gservidor {
+    position: relative;
+    bottom: 10em;
+    left: 20em;
+}
+
+
+
 /**--Serviços/info instalaçao programas--**/
 div#inst_programas {
     border-radius: 8px;
@@ -732,12 +797,9 @@ main div#texto2 h3 p {
 }
 
 
-main div#sobre {
-    height: 1000px;
-}
-
 main div#servicos {
-    height: 1000px;
+    height: 800px;
+    max-height: 1200px;
 }
 
 
@@ -1135,7 +1197,7 @@ div.contato {
     left: 48.8em;
     bottom: 0.3cm;
     width: 16.6em;
-    height: 8em;
+    height: 6em;
     background-color: #f3f3f367;
     border: 0.5px solid rgba(0, 0, 0, 0.219);
     border-radius: 0.25rem;
