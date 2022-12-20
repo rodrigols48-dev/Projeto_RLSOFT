@@ -1,5 +1,9 @@
 <header>
     <div id="header_inicial">
+        <div class="logo">
+            <a href="index.php">
+                <img src="_assets/RLSOFT(1).png"></a>
+        </div>
         <?php
         if (isset($_SESSION["user_portal"])) {
 
@@ -20,15 +24,15 @@
             <script type="text/javascript" src="pages/js.js"></script>
             <nav>
                 <ul>
-                    <li><a href="../../Projeto CRT/index.php">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                     <li><a href="javascript://" class="bt1">Produtos<img src="_assets/icons8-para-baixo-com-quadrado-20.png"></a>
                         <ul class="ul-produtos">
-                            <li><a href="../../Projeto CRT/pages/produtos.php">Produtos</a></li>
+                            <li><a href="pages/produtos.php">Produtos</a></li>
                             <li><a href="pages/cad_produtos.php">Cadastrar Produto</a></li>
                         </ul>
                         </a>
                     </li>
-                    <li><a href="../../Projeto CRT/pages/servicos.php">Serviços</a></li>
+                    <li><a href="pages/servicos.php">Serviços</a></li>
                     <li><a href="https://api.whatsapp.com/send/?phone=55085997946214&text&type=phone_number&app_absent=0">Contato</a></li>
                 </ul>
 
@@ -36,19 +40,13 @@
             <div id="header_saudacaoinicial">
                 <h5>
                     <p>Seja bem vindo(a), <?php echo $nome ?> |
-                        <link href="../_assets/icons8-sair-48.png"> <a href="../../Projeto CRT/login/logout.php"> sair
+                        <link href="../_assets/icons8-sair-48.png"> <a href="login/logout.php"> sair
                     </p>
                 </h5>
             </div>
         <?php
         }
-
         ?>
-        <div class="logo">
-            <a href="../../Projeto CRT/index.php">
-                <img src="/Projeto CRT/_assets/RLSOFT(1).png"></a>
-        </div>
-
     </div>
 
 </header>
