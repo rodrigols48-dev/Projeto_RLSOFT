@@ -1,8 +1,15 @@
-<?php require_once("../BD/conexao/conexao.php") ?>
-
 <?php
-// iniciar variavel de sessao
-session_start();
+if (session_status() !== PHP_SESSION_ACTIVE) { //Verificar se a sessão não já está aberta.
+    session_cache_expire(60); //Definindo o prazo para a cache expirar em 60 minutos.
+    session_start(); //inicia a sessão.
+
+    if ($_SESSION['user_portal'] == '') {
+        // Código para redirecionar para pagina de login
+        echo "<script> window.location.href ='login/login.php';</script>";;
+    }
+}
+
+require_once("BD/conexao/conexao.php");
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -16,12 +23,11 @@ session_start();
     <link href="_css/estilo.css" rel="stylesheet">
     <script type="text/Javascript" src="pages/script.js"></script>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-
+    <?php include_once("_incluir/topoinicial.php");
+    include_once("_incluir/funcoes.php"); ?>
 </head>
 
 <body background="_assets/white-abstract-wallpaper_23-2148830026.png">
-    <?php include_once("_incluir/topoinicial.php") ?>
-    <?php include_once("_incluir/funcoes.php") ?>
     <main>
         <div class="home">
             <img class="produtos" src="_assets/produtos (1).png">
@@ -125,8 +131,6 @@ session_start();
 </body>
 
 </html>
-
 <?php
 // Fechar conexao
-mysqli_close($conecta);
-?>
+mysqli_close($conecta); ?>
