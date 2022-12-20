@@ -1,12 +1,9 @@
-<?php require_once("../../BD/conexao/conexao.php") ?>
-
 <?php
-    session_start();
-    unset($_SESSION["user_portal"]);
-    header("location:login.php");
+session_destroy('user_portal');
+unset($_SESSION["user_portal"]);
+require_once("../BD/conexao/conexao.php");
+echo "<script>window.location.href ='login.php';</script>";
 ?>
-
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -23,7 +20,6 @@
 </body>
 
 </html>
-
 <?php
 // Fechar conexao
 mysqli_close($conecta);

@@ -1,6 +1,5 @@
-<?php require_once("../../BD/conexao/conexao.php"); ?>
+<?php require_once("../BD/conexao/conexao.php");
 
-<?php
 // insercao no banco
 if (isset($_POST["email"])) {
     $nomecompleto   = $_POST["nomecompleto"];
@@ -19,7 +18,7 @@ if (isset($_POST["email"])) {
     if (!$operacao_inserir) {
         die("Falha na inserção");
     } else {
-        header ("location:login.php");
+        header("location:login.php");
     }
 }
 
@@ -30,17 +29,14 @@ $linha_estados = mysqli_query($conecta, $estados);
 if (!$linha_estados) {
     die("erro no banco");
 }
-
 ?>
-
 <!DOCTYPE html>
 <html>
 
 <head>
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
     <div class="logo">
-        <a href="../../Projeto CRT/index.php">
-            <img src="/Projeto CRT/_assets/RLSOFT(1).png"></a>
+        <img src="../_assets/RLSOFT(1).png"></a>
     </div>
     <meta charset="UTF-8">
 
@@ -53,7 +49,7 @@ if (!$linha_estados) {
 <body background="../_assets/167-1677324_simple-dark-blue-background-images-dark-blue-background.jpg">
 
 
-    <?php include_once("../_incluir/funcoes.php");?>
+    <?php include_once("../_incluir/funcoes.php"); ?>
 
     <main>
         <div style="background-color: rgba(0, 0, 20, 0.5)" id="janela_cadastro">
@@ -80,7 +76,7 @@ if (!$linha_estados) {
 
 
             </form>
-           
+
         </div>
     </main>
     <?php include_once("../login/rodape_login.php"); ?>

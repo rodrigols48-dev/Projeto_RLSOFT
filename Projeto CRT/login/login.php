@@ -1,8 +1,10 @@
-<?php require_once("../../BD/conexao/conexao.php"); ?>
-
 <?php
-// iniciar variavel de sessao
-session_start();
+if (session_status() !== PHP_SESSION_ACTIVE) { //Verificar se a sessão não já está aberta.
+    session_cache_expire(60); //Definindo o prazo para a cache expirar em 60 minutos.
+    session_start(); //inicia a sessão.
+}
+
+require_once("../BD/conexao/conexao.php");
 
 if (isset($_POST["usuario"])) {
 
@@ -20,7 +22,6 @@ if (isset($_POST["usuario"])) {
     } else {
         $email   = '';
     }
-
     $login  = "SELECT *";
     $login .= " FROM clientes";
     $login .= " WHERE (usuario ='{$usuario}' OR email='{$email}') AND senha = '{$senha}'";
@@ -32,15 +33,20 @@ if (isset($_POST["usuario"])) {
     }
 
     $informacao = mysqli_fetch_assoc($acesso);
+    $_SESSION["user_portal"] = '';
 
     if (empty($informacao)) {
         $mensagem = "ERRO: Usuário ou senha inválido!";
+
+        /*if (session_unset('user_portal')) {
+            session_destroy('user_portal');
+        }*/
     } else {
         $_SESSION["user_portal"] = $informacao["clienteID"];
-        header("location:../index.php");
+        echo "<script> window.location.href ='../index.php';</script>";
+        //header("Location:../index.php");
     }
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -48,8 +54,7 @@ if (isset($_POST["usuario"])) {
 <head>
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
     <div class="logo">
-        <a href="../../Projeto CRT/index.php">
-            <img src="/Projeto CRT/_assets/RLSOFT(1).png"></a>
+        <img src="../_assets/RLSOFT(1).png">
     </div>
 
     <meta charset="UTF-8">
@@ -60,7 +65,6 @@ if (isset($_POST["usuario"])) {
 </head>
 
 <body background="../_assets/167-1677324_simple-dark-blue-background-images-dark-blue-background.jpg">
-
     <main>
         <div style="background-color: rgba(0, 0, 20, 0.5)" id="janela_login">
             <form action="login.php" method="post">
@@ -87,11 +91,10 @@ if (isset($_POST["usuario"])) {
             </form>
         </div>
     </main>
-   
+
 </body>
 
 </html>
 <?php
 // Fechar conexao
-mysqli_close($conecta);
-?>
+mysqli_close($conecta); ?>
